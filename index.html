@@ -5,11 +5,36 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <title>Vue Jobs</title>
 </head>
 
 <body>
+    <!-- access Vue object 11-->
+    <div id="app">
+        <!-- use the data 333-->
+        <h1>{{ message }}</h1>
+        <!-- use the method  44-->
+        <button @click='clickMe'>click me</button>
+    </div>
+    <script>
+        const app = Vue.createApp({
+            <!-- this function return object 22-->
+            data() {
+                return {
+                    message: "hello from Vue CDN"
+                };
+            },
 
+            methods: {
+                clickMe() {
+                    console.log('Button Clicked');
+                }
+            }
+        });
+
+        app.mount('#app');
+    </script>
 </body>
 
 </html>
